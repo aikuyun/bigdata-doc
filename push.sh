@@ -4,7 +4,7 @@
 set -e
 
 git init
-git add .
+git add -A
 git commit -m 'push'
 
 # 如果发布到 https://<USERNAME>.github.io
