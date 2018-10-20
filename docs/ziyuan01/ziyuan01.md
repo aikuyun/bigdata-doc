@@ -13,6 +13,29 @@
 他的新书《Machine Learning Yearning》现在可以[免费订阅](http://www.mlyearning.org/)。今后几个月里面，他每完成一个部分，你就会得到邮件通知，可以立即读到。根据说明，这本书大概100页左右，每章的长度很短，非常容易阅读。内容主要关于如何实现你自己的机器学习项目，重点不是算法，而是如何运用算法到真实项目。
 :::
 
+## 机器学习解释
+
+「电子书」
+
+![cover](http://on3wruzc4.bkt.clouddn.com/cover.jpg)
+
+[机器学习解释](https://christophm.github.io/interpretable-ml-book/)
+
+作者信息：
+
+:::tip
+About me: My name is Christoph Molnar, I am a statistician and machine learner, working on making machine learning interpretable. If you are interested in bringing interpretability to your machine learning models, feel free to contact me!
+
+Mail: christoph.molnar.ai@gmail.com
+
+Website: https://christophm.github.io/
+
+Follow me on Twitter! @ChristophMolnar
+
+Cover by @ArbeitAmText
+:::
+
+
 ## 数据科学基础
 
 [免费视频教程] [《Foundations of Data Science》](https://data.berkeley.edu/education/data-8x)，by 加州大学伯克利分校

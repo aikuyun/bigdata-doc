@@ -34,3 +34,16 @@
 ## GItHub 桌面
 
 [https://desktop.github.com/](https://desktop.github.com/)
+
+
+## 可视化编程JavaScript框架
+
+[](https://github.com/retejs/rete)
+
+![图](http://on3wruzc4.bkt.clouddn.com/rejs.png)
+
+## 命令行 2048 游戏
+
+[](https://github.com/plibither8/2048.cpp)
+
+![图](http://on3wruzc4.bkt.clouddn.com/c++.jpeg)
