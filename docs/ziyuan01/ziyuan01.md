@@ -66,6 +66,11 @@ Cover by **@ArbeitAmText**
 
 React 官方关于 React 原始设计思想的解释。
 
+## CSV and JSON 的比较
+![csv and json](http://on3wruzc4.bkt.clouddn.com/csv.png)
+
+[文章地址]:(CSV and JSON)[https://medium.com/@martindrapeau/the-state-of-csv-and-json-d97d1486333]
+
 6、[图片] [React v16.3 生命周期的示意图](https://github.com/wojtekmaj/react-lifecycle-methods-diagram)
 
 ![](http://www.ruanyifeng.com/blogimg/asset/2018/bg2018042304.png)
