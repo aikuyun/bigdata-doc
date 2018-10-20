@@ -21,18 +21,17 @@
 
 [机器学习解释](https://christophm.github.io/interpretable-ml-book/)
 
-作者信息：
 
-:::tip
+:::作者信息
 About me: My name is Christoph Molnar, I am a statistician and machine learner, working on making machine learning interpretable. If you are interested in bringing interpretability to your machine learning models, feel free to contact me!
 
-Mail: christoph.molnar.ai@gmail.com
+Mail: [christoph.molnar.ai@gmail.com](christoph.molnar.ai@gmail.com)
 
-Website: https://christophm.github.io/
+Website: [https://christophm.github.io/](https://christophm.github.io/)
 
-Follow me on Twitter! @ChristophMolnar
+Follow me on Twitter! **@ChristophMolnar**
 
-Cover by @ArbeitAmText
+Cover by **@ArbeitAmText**
 :::
 
 
