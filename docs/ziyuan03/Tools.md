@@ -50,4 +50,4 @@
 
 ## 将 mkdown 转变成 静态网页
 
-(前端脚本)[https://github.com/Dynalon/mdwiki]
+[前端脚本](https://github.com/Dynalon/mdwiki)

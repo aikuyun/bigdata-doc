@@ -11,3 +11,9 @@
 ## 3.国内各大互联网的技术架构
 
 [技术架构](https://github.com/davideuler/architecture.of.internet-product)
+
+## 使用 Python 实现算法
+
+该仓库收集各种使用 Python 实现的算法代码
+
+[TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)

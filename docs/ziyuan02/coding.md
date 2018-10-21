@@ -34,3 +34,9 @@ Flask 是 Python 的 Web 开发框架。这个教程教你如何用 Python 和 F
 
 这是一本互动书籍，免费，帮助读者了解如何使用 SQL 对数据集运行查询。
 [https://selectstarsql.com/](https://selectstarsql.com/)
+
+## 大数据数据集搜索
+
+[http://on3wruzc4.bkt.clouddn.com/dashuju.png](http://on3wruzc4.bkt.clouddn.com/dashuju.png)
+
+大数据研究需要数据集，谷歌推出数据集搜索，根据关键词找出相关的数据集。
