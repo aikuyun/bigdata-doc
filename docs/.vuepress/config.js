@@ -36,9 +36,6 @@ module.exports = {
       text: '代码仓库',
       link: '/ziyuan05/'
     }, {
-      text: '留言',
-      link: '/liuyan/liu'
-    }, {
       text: '主站',
       link: 'http://cuteximi.com'
     }, {
