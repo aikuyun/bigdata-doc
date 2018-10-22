@@ -51,3 +51,7 @@
 ## 将 mkdown 转变成 静态网页
 
 [前端脚本](https://github.com/Dynalon/mdwiki)
+
+## Mac 上好用的软件推荐
+
+[Mac软件合集](https://github.com/smyhvae/Mac/blob/master/01-Mac%E8%BD%AF%E4%BB%B6%E6%B1%87%E6%80%BB.md)
