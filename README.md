@@ -15,3 +15,5 @@ https：ziyuan.cuteximi.com
 
 - 深挖底层
   - [Hadoop HA 机制](https://github.com/aikuyun/ziyuan/tree/master/docs/ziyuan02#hadoop-ha-%E6%9C%BA%E5%88%B6)
+
+## 欢迎一起来交流 issue
