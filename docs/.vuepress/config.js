@@ -52,7 +52,7 @@ module.exports = {
     searchMaxSuggestions: 10, //搜索结果的数量
     lastUpdated: '上次更新',
 
-    repo: 'https://github.com/aikuyun/ziyuan.git',
+    repo: 'https://github.com/aikuyun/ziyuan',
     // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
     // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
     repoLabel: '查看源码',
