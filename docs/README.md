@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /ziyuan_big.png
+heroImage: /flash.png
 actionText: 快速获取 →
 actionLink: /ziyuan01/
 features:
