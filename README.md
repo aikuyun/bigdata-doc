@@ -5,7 +5,7 @@ This a bigdata document...
 >Many coders ask me how to improve their own performances. I cannot say anything except "solve and review and prepare your library" - Uwi Tenpen
 ## 直接访问
 
-https：ziyuan.cuteximi.com
+[大数据主页](https://ziyuan.cuteximi.com)
 
 ## 或者在 github 上查看
 
