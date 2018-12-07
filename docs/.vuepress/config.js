@@ -21,8 +21,11 @@ module.exports = {
 
   themeConfig: {
     nav: [{
-      text: 'BigData',
+      text: '大数据生态',
       link: '/ziyuan01/'
+    }, {
+      text: '深挖底层',
+      link: '/ziyuan02/'
     }, {
       text: '主站',
       link: 'http://cuteximi.com'
@@ -32,6 +35,9 @@ module.exports = {
     }, ],
     sidebar: {
       '/ziyuan01/': [
+        '', /* /foo/ */
+      ],
+      '/ziyuan02/': [
         '', /* /foo/ */
       ],
       // fallback
