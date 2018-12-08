@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /flash.png
-actionText: 快速获取 →
+actionText: Go →
 actionLink: /ziyuan01/
 features:
 - title: 集成
@@ -10,7 +10,5 @@ features:
   details: 分享有价值的开源资料
 - title: 高效
   details: 有目的的学习，高效升级打怪
-footer: Copyright © 2018 cuteximi.com
+footer: Copyright © 2016 - 2018 cuteximi.com
 ---
-# 觉得不错 ？
-- 欢迎给项目来一波star🤣,[地址](https://github.com/aikuyun/ziyuan)
