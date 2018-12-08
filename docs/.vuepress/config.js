@@ -21,11 +21,14 @@ module.exports = {
 
   themeConfig: {
     nav: [{
-      text: '大数据生态',
+      text: '🔥大数据生态',
       link: '/ziyuan01/'
     }, {
-      text: '深挖底层',
+      text: '👨‍💻‍深挖底层',
       link: '/ziyuan02/'
+    }, {
+      text: ' Mac 软件',
+      link: '/ziyuan03/'
     }, {
       text: '主站',
       link: 'http://cuteximi.com'
@@ -35,6 +38,9 @@ module.exports = {
         '', /* /foo/ */
       ],
       '/ziyuan02/': [
+        '', /* /foo/ */
+      ],
+      '/ziyuan03/': [
         '', /* /foo/ */
       ],
       // fallback
