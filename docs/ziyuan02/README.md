@@ -1,6 +1,4 @@
-# 深入底层
-
-## Hadoop HA 机制
+# Hadoop HA 机制
 
 Hadoop 2.x 架构在 NameNode 上的改变，解决了单点问题和主备切换的问题，元数据信息同步的问题，结合 ZK 来实现的，但是 ZK 是如何把主备的 NameNode 节点进行切换的呢？是如何让保证元数据信息同步的呢？
 
@@ -8,7 +6,7 @@ Hadoop 2.x 架构在 NameNode 上的改变，解决了单点问题和主备切�
 
 先来看一下官方提供的配置：Apache 官方的例子，熟悉的同学可以略过...
 
-### 配置
+## 配置
 
 先是配置 hdfs-site.xml 文件。
 
@@ -117,7 +115,7 @@ NameNode 主备，ZK 集群，JNS 集群，sshfence 一把利剑。
 
 原汁原味的文档，官方文档地址：[地址](http://hadoop.apache.org/docs/r3.0.2/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithQJM.html#Configuration\_details)
 
-### 主备切换
+## 主备切换
 
 __NameNode 的主备切换主要是由 ZKFailerController, HeathMonitor, ActiveStandbyElector 三个组件协同实现的。__
 
@@ -133,7 +131,7 @@ HealthMonitor 初始化完成之后会启动内部的线程来定时调用对应
 
 ZKFailoverController 调用对应 NameNode 的 HAServiceProtocol RPC 接口的方法将 NameNode 转换为 Active 状态或 Standby 状态。
 
-### 具体的细节：(重要)
+## 具体的细节：(重要)
 
 __健康检查：HeathMonitor__
 
@@ -201,7 +199,7 @@ Zookeeper 在工程实践的过程中经常会发生的一个现象就是 Zookee
 
 只有在成功地执行完成 fencing 之后，选主成功的 ActiveStandbyElector 才会回调 ZKFailoverController 的 becomeActive 方法将对应的 NameNode 转换为 Active 状态，开始对外提供服务。
 
-### JQM数据同步机制
+## JQM数据同步机制
 
 ActiveNameNode和StandbyNameNode使用 JouranlNode 集群来进行数据同步的过程如图所示，Active NameNode 首先把 EditLog 提交到 JournalNode 集群，然后 Standby NameNode 再从 JournalNode 集群定时同步 EditLog：
 
@@ -219,3 +217,10 @@ __Active NameNode 提交 EditLog 到 JournalNode 集群，当处于 Active 状�
       style="color:#52C41A"><strong>处于 finalized 状态的 EditLog Segment</strong></span>。“NameNode 的元数据存储概述”一节说过 EditLog Segment 实际上有两种状态，处于 in-progress 状态的 Edit Log 当前正在被写入，被认为是处于不稳定的中间态，有可能会在后续的过程之中发生修改，比如被截断。Active NameNode 在完成一个 EditLog Segment 的写入之后，就会向
     JournalNode 集群发送 finalizeLogSegment RPC 请求，将完成写入的 EditLog Segment finalized，然后开始下一个新的 EditLog Segment。一旦 finalizeLogSegment 方法在大多数的 JournalNode 上调用成功，表明这个 EditLog Segment 已经在大多数的 JournalNode 上达成一致。<strong>一个 EditLog Segment 处于 finalized 状态之后，可以保证它再也不会变化。</strong></div>
 </div>
+
+
+## 评价交流
+
+> 欢迎留下的你的想法~
+
+<Valine></Valine>
