@@ -1,4 +1,5 @@
-# HDFS的NameNode内存解析
+# HDFS的 NameNode 内存解析
+
 ## 概述
 从整个HDFS系统架构上看，NameNode是其中最重要、最复杂也是最容易出现问题的地方，而且一旦NameNode出现故障，整个Hadoop集群就将处于不可服务的状态，同时随着数据规模和集群规模地持续增长，很多小量级时被隐藏的问题逐渐暴露出来。所以，从更高层次掌握NameNode的内部结构和运行机制尤其重要。除特别说明外，本文基于社区版本Hadoop-2.4.1[1][2]，虽然2.4.1之后已经有多次版本迭代，但是基本原理相同。
 
@@ -9,7 +10,8 @@ NameNode管理着整个HDFS文件系统的元数据。从架构设计上看，�
 ![image.png | center | 592x416](https://cdn.nlark.com/yuque/0/2018/png/199648/1544578308842-6b685f51-0fb4-48fd-879a-901f60fc5e3e.png "")
 
 <div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p"><span data-type="color" style="color:rgb(68, 68, 68)">图1 HDFS结构图</span></div>
+  <div data-type="p"></div>
+  <div data-type="p">图1 HDFS结构图</div>
 </div>
 
 
@@ -24,12 +26,10 @@ NameNode管理着整个HDFS文件系统的元数据。从架构设计上看，�
 ![image.png | left | 747x374](https://cdn.nlark.com/yuque/0/2018/png/199648/1544578398487-312330d4-8315-4706-be23-43fc9871e0d7.png "")
 
 
-
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">图2 NameNode内存全景图
   </div>
 </div>
-
 
 Namespace：维护整个文件系统的目录树结构及目录树上的状态变化；
 BlockManager：维护整个文件系统中与数据块相关的信息及数据块的状态变化；
@@ -54,10 +54,13 @@ NameNode常驻内存主要被Namespace和BlockManager使用，二者使用占比
       <img src="https://tech.meituan.com/img/hdfs/namespace.png" width="" />
     </div>
 
-    图3 Namespace内存结构
   </div>
 </div>
 
+<div data-type="alignment" data-value="center" style="text-align:center">
+  <div data-type="p">图3 Namespace内存结构
+  </div>
+</div>
 
 在整个Namespace目录树中存在两种不同类型的INode数据结构：INodeDirectory和INodeFile。其中INodeDirectory标识的是目录树中的目录，INodeFile标识的是目录树中的文件。由于二者均继承自INode，所以具备大部分相同的公共信息INodeWithAdditionalFields，除常用基础属性外，其中还提供了扩展属性features，如Quota、Snapshot等均通过Feature增加，如果以后出现新属性也可通过Feature方便扩展。不同的是，INodeFile特有的标识副本数和数据块大小组合的header（2.6.1之后又新增了标识存储策略ID的信息）及该文件包含的有序Blocks数组；INodeDirectory则特有子节点的列表children。这里需要特别说明children是默认大小为5的ArrayList，按照子节点name有序存储，虽然在插入时会损失一部分写性能，但是可以方便后续快速二分查找提高读性能，对一般存储系统，读操作比写操作占比要高。具体的继承关系见图4所示。
 
@@ -72,7 +75,6 @@ NameNode常驻内存主要被Namespace和BlockManager使用，二者使用占比
 
 
 ### BlockManager
-
 BlocksMap在NameNode内存空间占据很大比例，由BlockManager统一管理，相比Namespace，BlockManager管理的这部分数据要复杂的多。Namespace与BlockManager之间通过前面提到的INodeFile有序Blocks数组关联到一起。图5所示BlockManager管理的内存结构。
 
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -84,7 +86,6 @@ BlocksMap在NameNode内存空间占据很大比例，由BlockManager统一管理
     图5 BlockManager管理的内存结构
   </div>
 </div>
-
 
 每一个INodeFile都会包含数量不等的Block，具体数量由文件大小及每一个Block大小（默认为64M）比值决定，这些Block按照所在文件的先后顺序组成BlockInfo数组，如图5所示的BlockInfo[A~K]，BlockInfo维护的是Block的元数据，结构如图6所示，数据本身是由DataNode管理，所以BlockInfo需要包含实际数据到底由哪些DataNode管理的信息，这里的核心是名为triplets的Object数组，大小为3\*replicas，其中replicas是Block副本数量。triplets包含的信息：
 
@@ -100,8 +101,7 @@ BlocksMap在NameNode内存空间占据很大比例，由BlockManager统一管理
       <img src="https://tech.meituan.com/img/hdfs/blockinfo.png" width="" />
     </div>
 
-    图6 BlockInfo继承关系
-  </div>
+    图6 BlockInfo继承关系</div>
 </div>
 
 
@@ -130,7 +130,6 @@ corruptReplicas：有些场景Block由于时间戳/长度不匹配等等造成Bl
   </div>
 </div>
 
-
 ### NetworkTopology
 
 前面多次提到Block与DataNode之间的关联关系，事实上NameNode确实还需要管理所有DataNode，不仅如此，由于数据写入前需要确定数据块写入位置，NameNode还维护着整个机架拓扑NetworkTopology。图8所示内存中机架拓扑图。
@@ -144,7 +143,6 @@ corruptReplicas：有些场景Block由于时间戳/长度不匹配等等造成Bl
     图8 NetworkTopology内存结构
   </div>
 </div>
-
 
 从图8可以看出这里包含两个部分：机架拓扑结构NetworkTopology和DataNode节点信息。其中树状的机架拓扑是根据机架感知（一般都是外部脚本计算得到）在集群启动完成后建立起来，整个机架的拓扑结构在NameNode的生命周期内一般不会发生变化；另一部分是比较关键的DataNode信息，BlockManager已经提到每一个DataNode上的Blocks集合都会形成一个双向链表，更准确的应该是DataNode的每一个存储单元DatanodeStorageInfo上的所有Blocks集合会形成一个双向链表，这个链表的入口就是机架拓扑结构叶子节点即DataNode管理的DatanodeStorageInfo。此外由于上层应用对数据的增删查随时发生变化，随之DatanodeStorageInfo上的Blocks也会动态变化，所以NetworkTopology上的DataNode对象还会管理这些动态变化的数据结构，如replicateBlocks/recoverBlocks/invalidateBlocks，这些数据结构正好和BlockManager管理的动态数据结构对应，实现了数据的动态变化由BlockManager传达到DataNode内存对象最后通过指令下达到物理DataNode实际执行的流动过程，流程在3.2 BlockManager已经介绍。
 
@@ -164,7 +162,6 @@ Lease 机制是重要的分布式协议，广泛应用于各种实际的分布�
   </div>
 </div>
 
-
 图9所示为LeaseManager内存结构，包括以下三个主要核心数据结构：
 
 * sortedLeases：Lease集合，按照时间先后有序组织，便于检查Lease是否超时；
@@ -183,12 +180,12 @@ NameNode内存数据结构非常丰富，这里对几个重要的数据结构进
 
 > <span data-type="color" style="color:#F5222D">测试数据显示，Namespace目录和文件总量到2亿，数据块总量到3亿后，常驻内存使用量超过90GB。</span>
 
-
 尽管社区和业界均对NameNode内存瓶颈有成熟的解决方案，但是不一定适用所有的场景，尤其是中小规模集群。结合实践过程和集群规模发展期可能遇到的NameNode内存相关问题这里有几点建议：
 
 1. 合并小文件。正如前面提到，目录/文件和Block均会占用NameNode内存空间，大量小文件会降低内存使用效率；另外，小文件的读写性能远远低于大文件的读写，主要原因对小文件读写需要在多个数据源切换，严重影响性能。
 2. 调整合适的BlockSize。主要针对集群内文件较大的业务场景，可以通过调整默认的Block Size大小（参数：dfs.blocksize，默认128M），降低NameNode的内存增长趋势。
 3. HDFS Federation方案。当集群和数据均达到一定规模时，仅通过垂直扩展NameNode已不能很好的支持业务发展，可以考虑HDFS Federation方案实现对NameNode的水平扩展，在解决NameNode的内存问题的同时通过Federation可以达到良好的隔离性，不会因为单一应用压垮整集群。
+
 
 ## 评价交流
 
