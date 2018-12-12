@@ -29,6 +29,7 @@ const sidebar = {
     children: [
       '', /* /foo/ */
       'MRyuanli',
+      'NameNodeDetail'
     ]
   }, {
     title: '优化',
@@ -85,7 +86,7 @@ module.exports = {
     sidebar,
   },
 
-  sidebar: 'auto',
+  //sidebar: 'auto',
 
   displayAllHeaders: true, // 显示所有页面的链接,默认值 false
   search: true, //开启显示搜索框,开箱即用的搜索功能。
