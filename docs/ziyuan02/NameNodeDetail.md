@@ -6,7 +6,6 @@
 NameNode管理着整个HDFS文件系统的元数据。从架构设计上看，元数据大致分成两个层次：Namespace管理层，负责管理文件系统中的树状目录结构以及文件与数据块的映射关系；块管理层，负责管理文件系统中文件的物理块与实际存储位置的映射关系BlocksMap，如图1所示[1]。Namespace管理的元数据除内存常驻外，也会周期Flush到持久化设备上FsImage文件；BlocksMap元数据只在内存中存在；当NameNode发生重启，首先从持久化设备中读取FsImage构建Namespace，之后根据DataNode的汇报信息重新构造BlocksMap。这两部分数据结构是占据了NameNode大部分JVM Heap空间。
 
 
-
 ![image.png | center | 592x416](https://cdn.nlark.com/yuque/0/2018/png/199648/1544578308842-6b685f51-0fb4-48fd-879a-901f60fc5e3e.png "")
 
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -79,11 +78,12 @@ BlocksMap在NameNode内存空间占据很大比例，由BlockManager统一管理
 
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">
-    <div data-type="image" data-display="block" data-align="left" data-src="https://tech.meituan.com/img/hdfs/blockmanager.png" data-width="">
+    <div data-type="image" data-display="block" data-align="center" data-src="https://tech.meituan.com/img/hdfs/blockmanager.png" data-width="">
       <img src="https://tech.meituan.com/img/hdfs/blockmanager.png" width="" />
     </div>
 
-    图5 BlockManager管理的内存结构
+    图5 BlockManager管理的内存结构</div>
+  <div data-type="p">
   </div>
 </div>
 
@@ -182,9 +182,10 @@ NameNode内存数据结构非常丰富，这里对几个重要的数据结构进
 
 尽管社区和业界均对NameNode内存瓶颈有成熟的解决方案，但是不一定适用所有的场景，尤其是中小规模集群。结合实践过程和集群规模发展期可能遇到的NameNode内存相关问题这里有几点建议：
 
-1. 合并小文件。正如前面提到，目录/文件和Block均会占用NameNode内存空间，大量小文件会降低内存使用效率；另外，小文件的读写性能远远低于大文件的读写，主要原因对小文件读写需要在多个数据源切换，严重影响性能。
-2. 调整合适的BlockSize。主要针对集群内文件较大的业务场景，可以通过调整默认的Block Size大小（参数：dfs.blocksize，默认128M），降低NameNode的内存增长趋势。
-3. HDFS Federation方案。当集群和数据均达到一定规模时，仅通过垂直扩展NameNode已不能很好的支持业务发展，可以考虑HDFS Federation方案实现对NameNode的水平扩展，在解决NameNode的内存问题的同时通过Federation可以达到良好的隔离性，不会因为单一应用压垮整集群。
+* 合并小文件。正如前面提到，目录/文件和Block均会占用NameNode内存空间，大量小文件会降低内存使用效率；另外，小文件的读写性能远远低于大文件的读写，主要原因对小文件读写需要在多个数据源切换，严重影响性能。
+* 调整合适的BlockSize。主要针对集群内文件较大的业务场景，可以通过调整默认的Block Size大小（参数：dfs.blocksize，默认128M），降低NameNode的内存增长趋势。
+* HDFS Federation方案。当集群和数据均达到一定规模时，仅通过垂直扩展NameNode已不能很好的支持业务发展，可以考虑HDFS Federation方案实现对NameNode的水平扩展，在解决NameNode的内存问题的同时通过Federation可以达到良好的隔离性，不会因为单一应用压垮整集群。
+
 
 
 ## 评价交流
