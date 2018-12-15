@@ -3,6 +3,10 @@
 This a bigdata document...
 
 >Many coders ask me how to improve their own performances. I cannot say anything except "solve and review and prepare your library" - Uwi Tenpen
+
+## 作者
+[]()
+
 ## 直接访问
 
 [大数据主页](https://ziyuan.cuteximi.com)
