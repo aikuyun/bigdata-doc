@@ -5,8 +5,6 @@
 
 NameNode管理着整个HDFS文件系统的元数据。从架构设计上看，元数据大致分成两个层次：Namespace管理层，负责管理文件系统中的树状目录结构以及文件与数据块的映射关系；块管理层，负责管理文件系统中文件的物理块与实际存储位置的映射关系BlocksMap，如图1所示[1]。Namespace管理的元数据除内存常驻外，也会周期Flush到持久化设备上FsImage文件；BlocksMap元数据只在内存中存在；当NameNode发生重启，首先从持久化设备中读取FsImage构建Namespace，之后根据DataNode的汇报信息重新构造BlocksMap。这两部分数据结构是占据了NameNode大部分JVM Heap空间。
 
-
-
 ![image.png | center | 592x416](https://cdn.nlark.com/yuque/0/2018/png/199648/1544578308842-6b685f51-0fb4-48fd-879a-901f60fc5e3e.png "")
 
 <div data-type="alignment" data-value="center" style="text-align:center">
@@ -43,6 +41,7 @@ DelegationTokenSecretManager：管理HDFS的安全访问；
 
 NameNode常驻内存主要被Namespace和BlockManager使用，二者使用占比分别接近50%。其它部分内存开销较小且相对固定，与Namespace和BlockManager相比基本可以忽略。
 
+
 ## 模块细节
 ### Namespace
 
@@ -50,8 +49,8 @@ NameNode常驻内存主要被Namespace和BlockManager使用，二者使用占比
 
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">
-    <div data-type="image" data-display="block" data-align="left" data-src="https://tech.meituan.com/img/hdfs/namespace.png" data-width="">
-      <img src="https://tech.meituan.com/img/hdfs/namespace.png" width="" />
+    <div data-type="image" data-display="block" data-align="left" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867899526-b89ec04a-b2c3-4d2d-bd53-77ab5de933b6.png" data-width="765">
+      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867899526-b89ec04a-b2c3-4d2d-bd53-77ab5de933b6.png" width="765" />
     </div>
 
   </div>
@@ -65,12 +64,11 @@ NameNode常驻内存主要被Namespace和BlockManager使用，二者使用占比
 在整个Namespace目录树中存在两种不同类型的INode数据结构：INodeDirectory和INodeFile。其中INodeDirectory标识的是目录树中的目录，INodeFile标识的是目录树中的文件。由于二者均继承自INode，所以具备大部分相同的公共信息INodeWithAdditionalFields，除常用基础属性外，其中还提供了扩展属性features，如Quota、Snapshot等均通过Feature增加，如果以后出现新属性也可通过Feature方便扩展。不同的是，INodeFile特有的标识副本数和数据块大小组合的header（2.6.1之后又新增了标识存储策略ID的信息）及该文件包含的有序Blocks数组；INodeDirectory则特有子节点的列表children。这里需要特别说明children是默认大小为5的ArrayList，按照子节点name有序存储，虽然在插入时会损失一部分写性能，但是可以方便后续快速二分查找提高读性能，对一般存储系统，读操作比写操作占比要高。具体的继承关系见图4所示。
 
 <div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">
-    <div data-type="image" data-display="block" data-align="center" data-src="https://tech.meituan.com/img/hdfs/inode.png" data-width="">
-      <img src="https://tech.meituan.com/img/hdfs/inode.png" width="" />
+    <div data-type="image" data-display="block" data-align="center" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867906489-436dc9a9-d2d0-4b96-82f9-f70faf136ddd.png" data-width="617">
+      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867906489-436dc9a9-d2d0-4b96-82f9-f70faf136ddd.png" width="617" />
     </div>
 
-    图4 INode继承关系</div>
+    <div>图4 INode继承关系</div>
 </div>
 
 
@@ -78,16 +76,14 @@ NameNode常驻内存主要被Namespace和BlockManager使用，二者使用占比
 BlocksMap在NameNode内存空间占据很大比例，由BlockManager统一管理，相比Namespace，BlockManager管理的这部分数据要复杂的多。Namespace与BlockManager之间通过前面提到的INodeFile有序Blocks数组关联到一起。图5所示BlockManager管理的内存结构。
 
 <div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">
-    <div id="11y8dy" data-type="image" data-display="block" data-align="" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544580400814-26ec226c-75ca-4df3-88a8-60d54cf0c2e1.png" data-width="722">
-      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544580400814-26ec226c-75ca-4df3-88a8-60d54cf0c2e1.png" width="722" />
-    </div>
 
-    图5 BlockManager管理的内存结构</div>
+    <div id="11y8dy" data-type="image" data-display="block" data-align="" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867807269-d84dd71e-4e39-4de5-b457-b6ccb3c8a285.png" data-width="722">
+      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867807269-d84dd71e-4e39-4de5-b457-b6ccb3c8a285.png" width="722" />
+    </div>
 </div>
 
 <div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p"></div>
+  <div data-type="p">图5 BlockManager管理的内存结构</div>
 </div>
 
 每一个INodeFile都会包含数量不等的Block，具体数量由文件大小及每一个Block大小（默认为64M）比值决定，这些Block按照所在文件的先后顺序组成BlockInfo数组，如图5所示的BlockInfo[A~K]，BlockInfo维护的是Block的元数据，结构如图6所示，数据本身是由DataNode管理，所以BlockInfo需要包含实际数据到底由哪些DataNode管理的信息，这里的核心是名为triplets的Object数组，大小为3\*replicas，其中replicas是Block副本数量。triplets包含的信息：
@@ -99,12 +95,12 @@ BlocksMap在NameNode内存空间占据很大比例，由BlockManager统一管理
 其中i表示的是Block的第i个副本，i取值[0,replicas)。
 
 <div data-type="alignment" data-value="center" style="text-align:center">
-  <div data-type="p">
-    <div id="fn2gdy" data-type="image" data-display="block" data-align="center" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544580377433-2275c5bb-b967-4e99-b64e-5f8eddd32e0f.png" data-width="282">
-      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544580377433-2275c5bb-b967-4e99-b64e-5f8eddd32e0f.png" width="282" />
+
+    <div id="fn2gdy" data-type="image" data-display="block" data-align="center" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867799595-2987f0d7-a2c0-4bdd-b364-69e60cf5e214.png" data-width="282">
+      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867799595-2987f0d7-a2c0-4bdd-b364-69e60cf5e214.png" width="282" />
     </div>
 
-    图6 BlockInfo继承关系</div>
+    <div data-type="p">图6 BlockInfo继承关系</div>
 </div>
 
 
@@ -125,8 +121,8 @@ corruptReplicas：有些场景Block由于时间戳/长度不匹配等等造成Bl
 
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">
-    <div id="mwzbgy" data-type="image" data-display="block" data-align="" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544580353633-e3d27ac4-50c2-4ce5-975f-25a32f53c363.png" data-width="747">
-      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544580353633-e3d27ac4-50c2-4ce5-975f-25a32f53c363.png" width="747" />
+    <div id="mwzbgy" data-type="image" data-display="block" data-align="" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867790956-36c5f1e2-fa39-41e8-a086-6cafc4a47713.png" data-width="747">
+      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867790956-36c5f1e2-fa39-41e8-a086-6cafc4a47713.png" width="747" />
     </div>
 
     图7 副本数异常时处理过程
@@ -139,8 +135,8 @@ corruptReplicas：有些场景Block由于时间戳/长度不匹配等等造成Bl
 
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">
-    <div id="hmh3gz" data-type="image" data-display="block" data-align="" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544580338604-b414ff49-d519-4ac3-adde-f531d09545c5.png" data-width="747">
-      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544580338604-b414ff49-d519-4ac3-adde-f531d09545c5.png" width="747" />
+    <div id="hmh3gz" data-type="image" data-display="block" data-align="" data-src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867782546-e6232210-72c4-4dd4-8080-1dfb8e26ef2d.png" data-width="747">
+      <img src="https://cdn.nlark.com/yuque/0/2018/png/199648/1544867782546-e6232210-72c4-4dd4-8080-1dfb8e26ef2d.png" width="747" />
     </div>
 
     图8 NetworkTopology内存结构
@@ -156,13 +152,11 @@ corruptReplicas：有些场景Block由于时间戳/长度不匹配等等造成Bl
 Lease 机制是重要的分布式协议，广泛应用于各种实际的分布式系统中。HDFS支持Write-Once-Read-Many，对文件写操作的互斥同步靠Lease实现。Lease实际上是时间约束锁，其主要特点是排他性。客户端写文件时需要先申请一个Lease，一旦有客户端持有了某个文件的Lease，其它客户端就不可能再申请到该文件的Lease，这就保证了同一时刻对一个文件的写操作只能发生在一个客户端。NameNode的LeaseManager是Lease机制的核心，维护了文件与Lease、客户端与Lease的对应关系，这类信息会随写数据的变化实时发生对应改变。
 
 
-
-![9.png | center | 747x447](https://cdn.nlark.com/yuque/0/2018/png/199648/1544580318037-17485ad1-6c8e-470d-aed2-215e1801d9cc.png "")
+![9.png | center | 747x447](https://cdn.nlark.com/yuque/0/2018/png/199648/1544867768625-2b7f5ebe-79bb-4d3a-a086-5e28ade0eb01.png "")
 
 <div data-type="alignment" data-value="center" style="text-align:center">
   <div data-type="p">9 LeaseManager的内存数据结构
   </div>
-  <div data-type="p"></div>
 </div>
 
 图9所示为LeaseManager内存结构，包括以下三个主要核心数据结构：

@@ -53,6 +53,13 @@ var nav = [{
   text: '👨‍💻‍深挖底层',
   link: '/ziyuan02/'
 }, {
+  text: '关于我',
+  link: '/about/'
+}, {
+  text: '📮 留言',
+  link: '/liuyan/'
+},
+{
   text: ' Mac 软件',
   link: '/ziyuan03/'
 }, {
