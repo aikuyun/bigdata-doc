@@ -2,7 +2,6 @@ const sidebar = {
   '/distribute/': [{
     title: '分布式',
     children: [
-      '',
       'distribute',
     ]
   }],
@@ -36,6 +35,11 @@ const sidebar = {
     children: [
       'secondarySort',
       'skewindata'
+    ]
+  },{
+    title: 'kafka',
+    children: [
+      'kafka-01',
     ]
   }],
   '/ziyuan03/': [{
