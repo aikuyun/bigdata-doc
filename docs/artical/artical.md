@@ -23,6 +23,14 @@
 
 2.Spark Sql 使用hiveContext [查看文章](https://blog.csdn.net/qq_41455420/article/details/79515511)
 
+3.Spark 分组TopN [查看文章](https://blog.csdn.net/luofazha2012/article/details/80636858)
+
+4.Spark中foreachPartition和mapPartitions的区别 [查看文章](https://blog.csdn.net/u010454030/article/details/78897150)
+
+5.谓词下推 [查看文章](https://blog.csdn.net/zxm1306192988/article/details/80255747)
+
+6.Spark 数据本地化。 [查看文章](https://www.cnblogs.com/jxhd1/p/6702224.html?utm_source=itdadao&utm_medium=referral)
+
 ## HDFS
 
 0.HDFS 的知识点总结 [查看文章](https://www.cnblogs.com/caiyisen/p/7395843.html)
