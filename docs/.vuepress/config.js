@@ -1,4 +1,10 @@
 const sidebar = {
+  '/artical/':[{
+    title:'文章',
+    children:[
+      'artical'
+    ]
+  }],
   '/distribute/': [{
     title: '分布式',
     children: [
@@ -51,16 +57,20 @@ const sidebar = {
 }
 
 var nav = [{
-  text: '🔥大数据生态',
+  text: '大数据',
   link: '/ziyuan01/'
 }, {
   text: '👨‍💻‍深挖底层',
   link: '/ziyuan02/'
 }, {
+  text: '技术文章整合',
+  link: '/artical/artical.html'
+},
+{
   text: '关于我',
   link: '/about/'
 }, {
-  text: '📮 留言',
+  text: '留言',
   link: '/liuyan/'
 },
 {
@@ -120,5 +130,7 @@ module.exports = {
   // 默认是 false, 设置为 true 来启用
   editLinks: true,
   // 默认为 "Edit this page"
-  editLinkText: '帮助改善此页面！'
+  editLinkText: '帮助改善此页面！',
+
+  plugins: ['@vuepress/back-to-top']
 }
