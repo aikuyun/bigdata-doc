@@ -1,4 +1,11 @@
 const sidebar = {
+  '/It-chat/':[{
+      title:'案例',
+      children:[
+        'case'
+      ]
+    }
+  ],
   '/artical/':[{
     title:'文章',
     children:[
@@ -65,7 +72,11 @@ var nav = [{
 }, {
   text: '技术文章整合',
   link: '/artical/artical.html'
-},
+},{
+  text: '优秀案例',
+  link: '/It-chat/case.html'
+}
+,
 {
   text: '关于我',
   link: '/about/'
