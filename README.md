@@ -32,6 +32,8 @@ This a bigdata document...
 
   - [二次排序](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/secondarySort.md)
 
+  - [kafka](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/kafka-01.md)
+  
 - 解决方案
   - [很多大厂解决方案](https://github.com/aikuyun/ziyuan/blob/master/docs/It-chat/case.md)
 
