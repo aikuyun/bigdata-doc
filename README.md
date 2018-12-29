@@ -32,4 +32,11 @@ This a bigdata document...
 
   - [二次排序](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/secondarySort.md)
 
+- 解决方案
+  - [很多大厂解决方案](https://github.com/aikuyun/ziyuan/blob/master/docs/It-chat/case.md)
+
+- 技术文章整理
+
+  - [技术文章整理](https://github.com/aikuyun/ziyuan/blob/master/docs/artical/artical.md)
+
 ## 欢迎一起来交流 issue
