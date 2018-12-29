@@ -8,11 +8,11 @@ This a bigdata document...
 
 [作者简介](https://ziyuan.cuteximi.com/about/)
 
-## 直接访问
+## 直接访问 -->
 
 [大数据主页](https://ziyuan.cuteximi.com)
 
-## 或者在 github 上查看
+## 在 github 上查看 -->
 
 - 分布式基础
 
@@ -33,7 +33,7 @@ This a bigdata document...
   - [二次排序](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/secondarySort.md)
 
   - [kafka](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/kafka-01.md)
-  
+
 - 解决方案
   - [很多大厂解决方案](https://github.com/aikuyun/ziyuan/blob/master/docs/It-chat/case.md)
 
