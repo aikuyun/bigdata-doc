@@ -4,15 +4,15 @@ This a bigdata document...
 
 >Many coders ask me how to improve their own performances. I cannot say anything except "solve and review and prepare your library" - Uwi Tenpen
 
-## 作者
+### 作者
 
-[作者简介](https://ziyuan.cuteximi.com/about/)
+[作者简介](https://cuteximi.com/resume)
 
-## 直接访问 -->
+### 直接访问
 
 [大数据主页](https://ziyuan.cuteximi.com)
 
-## 在 github 上查看 -->
+### 在 github 上查看
 
 - 分布式基础
 
