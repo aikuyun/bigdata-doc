@@ -26,10 +26,10 @@ This a bigdata document...
 - 深挖底层
   - [Hadoop HA 机制](https://github.com/aikuyun/ziyuan/tree/master/docs/ziyuan02#hadoop-ha-%E6%9C%BA%E5%88%B6)
 
-  -[MR原理和运行过程](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/MRyuanli.md)
+  - [MR原理和运行过程](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/MRyuanli.md)
 
-  -[NameNode内部解析](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/MRyuanli.md)
+  - [NameNode内部解析](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/MRyuanli.md)
 
-  -[二次排序](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/secondarySort.md)
+  - [二次排序](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan02/secondarySort.md)
 
 ## 欢迎一起来交流 issue
