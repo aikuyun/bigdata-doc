@@ -14,16 +14,19 @@
 
 ## 消息队列
 
-1.Kafka文件存储机制那些事 [查看文章](https://tech.meituan.com/kafka_fs_design_theory.html)
+0. Kafka文件存储机制那些事 [查看文章](https://tech.meituan.com/kafka_fs_design_theory.html)
 
 ## Java
 
-1.不得不说的Java “锁” 事 [查看文章](https://tech.meituan.com/Java_Lock.html)
+0. 不得不说的Java “锁” 事 [查看文章](https://tech.meituan.com/Java_Lock.html)
 
 ## 搜索
 
-1.京东到家订单中心 Elasticsearch 演进历程 [查看文章](https://mp.weixin.qq.com/s/TrCJJtvhjB2m29fOOa3Rzg)
+0. 京东到家订单中心 Elasticsearch 演进历程 [查看文章](https://mp.weixin.qq.com/s/TrCJJtvhjB2m29fOOa3Rzg)
 
+## HBase
+
+0. HBase实战 | 58HBase平台实践和应用-平台建设篇 [查看文章](https://mp.weixin.qq.com/s/x4Hx0402HEEtNchYEzlwww)
 ## 评价交流
 
 > 欢迎留下的你的想法~
