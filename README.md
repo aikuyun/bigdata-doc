@@ -41,4 +41,25 @@ This a bigdata document...
 
   - [技术文章整理](https://github.com/aikuyun/ziyuan/blob/master/docs/artical/artical.md)
 
-## 欢迎一起来交流 issue
+### 微信公众号文章
+
+欢迎关注微信公众号：**大数据进击之路**
+
+- Spark
+	- [Spark 调优](https://mp.weixin.qq.com/s/iNovecaYkKrytNgQMvIMZw)
+	- [Spark shuffle 寻址流程](https://mp.weixin.qq.com/s/0eQPmVnXCbEr1ziPAW569A)
+	- [Spark shuffle 调优](https://mp.weixin.qq.com/s/keJnU0trtTW9W-zBWPKD5A)
+	- [Spark 数据本地化级别](https://mp.weixin.qq.com/s/kF4zjiambBohSJG9gZW8_g)
+
+- kafka
+	- [kafka + sparkstreaming](https://mp.weixin.qq.com/s/wKjSalxFdVkRXGPnNVg_2g)
+	- [kafka 数据丢失与重复消费](https://mp.weixin.qq.com/s/ROoVOVgNW8jzdCZeAwLTDQ)
+
+- HBase
+	- [HBase 架构](https://mp.weixin.qq.com/s/j2Kbi003Etzw_15KwV0TyQ)
+	- [HBase 架构补充](https://mp.weixin.qq.com/s/7yRequ0pqGN_00zi704wwA)
+
+- Hadoop
+	- [Hadoop HA 原理分析](https://mp.weixin.qq.com/s/BmVvoi8k0mU9pmGQCl2Sug)
+
+## 欢迎一起来交流
