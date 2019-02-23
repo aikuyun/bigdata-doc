@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /flash.png
-actionText: 点我
+actionText: 开始学习
 actionLink: /ziyuan01/
 features:
 - title: 集成

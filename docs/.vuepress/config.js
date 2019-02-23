@@ -22,12 +22,14 @@ const sidebar = {
     title: '大数据简介',
     children: [
       'jianjie',
+      'BigDataIs'
     ]
   }, {
     title: '大数据生态',
     children: [
       '',
       'MR',
+      'Hive'
     ]
   }, {
     title: '分布式',

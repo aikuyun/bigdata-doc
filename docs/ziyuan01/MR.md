@@ -193,10 +193,3 @@ __Merge Sort__
 这里使用的Merge和Map端使用的Merge过程一样。Map的输出数据已经是有序的，Merge进行一次合并排序，所谓Reduce端的sort过程就是这个合并的过程。一般Reduce是一边copy一边sort，即copy和sort两个阶段是重叠而不是完全分开的。
 
 Reduce端的Shuffle过程至此结束。
-
-
-## 评价交流
-
-> 欢迎留下的你的想法~
-
-<Valine></Valine>

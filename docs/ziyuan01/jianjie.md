@@ -99,10 +99,3 @@
 
 
 ![image.png | left | 747x207](https://cdn.nlark.com/yuque/0/2018/png/134439/1543471670387-c52db064-58e9-4c94-9277-d32dcf2c5a68.png "")
-
-
-## 评价交流
-
-> 欢迎留下的你的想法~
-
-<Valine></Valine>
