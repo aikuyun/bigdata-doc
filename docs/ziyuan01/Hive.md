@@ -1,6 +1,5 @@
 # Hive 篇
 
-# Hive 笔记
 
 ![image.png | center | 114x105](https://cdn.nlark.com/yuque/0/2019/png/199648/1548171293996-7543ab21-1496-49ad-9a1b-51a98e1a4d75.png "")
 
@@ -597,7 +596,7 @@ public class HiveJdbcClient {
 }
 ```
 
-## __分区 & 分桶__
+## 分区 & 分桶
 
 Hive 分区表的建立是为了方便管理大量的数据。比如下面这个例子：分区使用关键词  partitioned by
 
@@ -703,10 +702,10 @@ public class Trim extends UDF {
 
 UDAF 和 UDTF 函数用的比较少。
 
-### Hive 优化
+## Hive 优化
 
-Hive 优化
-核心思想：把Hive SQL 当做Mapreduce程序去优化
+> 核心思想：把Hive SQL 当做Mapreduce程序去优化
+
 以下SQL不会转为Mapreduce来执行
 	--select仅查询本表字段
 	--where仅对本表字段做条件过滤
