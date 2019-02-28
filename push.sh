@@ -12,4 +12,4 @@ git commit -m '更新文章内容'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 
-git push -f git@github.com:aikuyun/bigdata-site.git master
+git push -f git@github.com:aikuyun/bigdata-doc.git master
