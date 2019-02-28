@@ -10,7 +10,7 @@ This a bigdata document...
 
 ### 直接访问
 
-[大数据主页](https://ziyuan.cuteximi.com)
+[大数据主页](https://data.cuteximi.com)
 
 ### 在 github 上查看
 
@@ -22,6 +22,8 @@ This a bigdata document...
   - [HDFS](https://github.com/aikuyun/ziyuan/tree/master/docs/ziyuan01#hdfs)
 
   - [MapReduce](https://github.com/aikuyun/ziyuan/tree/master/docs/ziyuan01#mapreduce)
+
+  - [Hive](https://github.com/aikuyun/ziyuan/blob/master/docs/ziyuan01/Hive.md)
 
 - 深挖底层
   - [Hadoop HA 机制](https://github.com/aikuyun/ziyuan/tree/master/docs/ziyuan02#hadoop-ha-%E6%9C%BA%E5%88%B6)
