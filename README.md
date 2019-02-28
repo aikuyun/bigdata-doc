@@ -16,7 +16,7 @@ This a bigdata document...
 
 - 分布式基础
 
-  -[分布式基础](https://github.com/aikuyun/ziyuan/blob/master/docs/distribute/distribute.md)
+  - [分布式基础](https://github.com/aikuyun/ziyuan/blob/master/docs/distribute/distribute.md)
 
 - 大数据生态
   - [HDFS](https://github.com/aikuyun/ziyuan/tree/master/docs/ziyuan01#hdfs)
