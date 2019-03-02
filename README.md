@@ -52,6 +52,7 @@ This a bigdata document...
 	- [Spark shuffle 寻址流程](https://mp.weixin.qq.com/s/0eQPmVnXCbEr1ziPAW569A)
 	- [Spark shuffle 调优](https://mp.weixin.qq.com/s/keJnU0trtTW9W-zBWPKD5A)
 	- [Spark 数据本地化级别](https://mp.weixin.qq.com/s/kF4zjiambBohSJG9gZW8_g)
+	- [Spark 的核心 RDD 以及 Stage 划分细节，运行模式总结](https://mp.weixin.qq.com/s/aPwsPTkFakBwv3MIioaOOg)
 
 - kafka
 	- [kafka + sparkstreaming](https://mp.weixin.qq.com/s/wKjSalxFdVkRXGPnNVg_2g)
@@ -63,5 +64,7 @@ This a bigdata document...
 
 - Hadoop
 	- [Hadoop HA 原理分析](https://mp.weixin.qq.com/s/BmVvoi8k0mU9pmGQCl2Sug)
+	- Hadoop 系列文章
+		- [Hadoop系列之 1.0 和 2.0 架构](https://mp.weixin.qq.com/s/B_wOtK1gSVlmB4cF5hZG2A)
 
 ## 欢迎一起来交流
