@@ -1,5 +1,6 @@
-![自学](https://img.shields.io/badge/%E8%87%AA%E5%AD%A6-%E5%A4%A7%E6%95%B0%E6%8D%AE-brightgreen.svg)
+![自学大数据](https://img.shields.io/badge/%E8%87%AA%E5%AD%A6-%E5%A4%A7%E6%95%B0%E6%8D%AE-brightgreen.svg)
 ![zixue](https://img.shields.io/badge/Self--taught%20-Big%20Data-brightgreen.svg)
+![自学机器学习](https://img.shields.io/badge/%E8%87%AA%E5%AD%A6-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-brightgreen.svg)
 
 # 资源整合
 
