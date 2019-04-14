@@ -1,6 +1,6 @@
 # 资源整合
 
-This a bigdata document...
+大数据与机器学习笔记，持续更新中...
 
 >Many coders ask me how to improve their own performances. I cannot say anything except "solve and review and prepare your library" - Uwi Tenpen
 
@@ -13,6 +13,11 @@ This a bigdata document...
 [大数据主页](https://data.cuteximi.com)
 
 ### 在 github 上查看
+
+- 机器学习
+  - []()
+  - []()
+  
 
 - 分布式基础
 
