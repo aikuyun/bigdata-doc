@@ -22,7 +22,9 @@ const sidebar = {
       title: '机器学习基础',
       children: [
         'ml-guid',
-        'ml-term'
+        'ml-term',
+        'study-website',
+        'study-road'
       ]
     }],
   '/ziyuan01/': [{
