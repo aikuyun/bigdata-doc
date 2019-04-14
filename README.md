@@ -1,12 +1,10 @@
 ![自学大数据](https://img.shields.io/badge/%E8%87%AA%E5%AD%A6-%E5%A4%A7%E6%95%B0%E6%8D%AE-brightgreen.svg)
-![zixue](https://img.shields.io/badge/Self--taught%20-Big%20Data-brightgreen.svg)
 ![自学机器学习](https://img.shields.io/badge/%E8%87%AA%E5%AD%A6-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-brightgreen.svg)
+![大数据进击之路](https://img.shields.io/badge/%E8%87%AA%E5%AD%A6-%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BF%9B%E5%87%BB%E4%B9%8B%E8%B7%AF-blue.svg)
 
 # 资源整合
 
-大数据与机器学习笔记，持续更新中...
-
->Many coders ask me how to improve their own performances. I cannot say anything except "solve and review and prepare your library" - Uwi Tenpen
+大数据与机器学习笔记，持续更新中。
 
 ### 作者
 
