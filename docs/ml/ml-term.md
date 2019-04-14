@@ -1,0 +1,19 @@
+# 机器学习--术语
+
+每个行业都有一些行话，外行人经常是刚接触就一头雾水，今天我们来捋一捋部分机器学习相关的术语。
+在人工智能界有一种说法，认为> **机器学习**是人工智能领域中最能够体现智能的一个分支。我们或许每天都在不知不觉中使用了机器学习的算法每次，你打开谷歌、必应搜索到你需要的内容，正是因为他们有良好的学习算法。谷歌和微软实现了学习算法来排行网页每次，你用 > ****Facebook ****或苹果的图片分类程序他能认出你朋友的照片，这也是机器学习。每次您阅读您的电子邮件垃圾邮件筛选器，可以帮你过滤大量的垃圾邮件这也是一种学习算法。
+![](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1553655951386-9cb9fc75-8ff4-44cb-989c-072ddffc1efa.jpeg#align=left&display=inline&height=479&originHeight=625&originWidth=974&size=0&status=done&width=746)<br />在进行机器学习研究之前，我们要有数据，假设我们有一组西瓜的数据，例如（色泽=青涩，敲声=清脆）,（色泽=浅白，敲声=浑响）等等一组这样的数据，我们称之为**数据集（data set），**其中每一条记录是关于一个事件或对象的描述，称为一个示例（instance）或**样本（sample）**。反应事件或对象在某方面的表现和性质，例如“色泽”，“敲声”，称为**特征**（feature）,特征的取值，例如“青涩”，“浅白”，称为特征值，属性张成的空间称为**样本空间**（sample space）。如果我们把特征当做坐标轴，可以构建一个多维空间，每个西瓜🍉都可以找到自己的坐标，这个点也可以使用向量表示，称为**特征向量（feature vector）**。<br />在这篇文章中，提到机器学习可以类比为人类的归纳总结过程。经验=数据，归纳=训练。         <br />![](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1553655951408-35fb9992-a8a1-4b0a-9a83-c06a0d360cfb.jpeg#align=left&display=inline&height=359&originHeight=520&originWidth=1080&size=0&status=done&width=746)现在我们要拿着上文的数据，来训练我们选西瓜的模型。这个从数据到模型的过程，称之为**训练（training）**或**学习(learning)**。这个过程通过某个学习算法来完成的。训练过程使用的数据，成为训练数据（training data），其中每个样本称为一个**训练样本**（training sample）。训练样本组成的集合成为**训练集（training set）**。学习算法通常有参数设置，使用不用的参数值和训练数据，将产生不同的结果。<br />当然，要建立一个帮助我们买瓜的模型，仅有前面的数据是远远不够的，要建立这样的关于预测的模型，我们需要获得训练样本的结果信息，例如（（色泽=青涩，敲声=浑响）,好瓜），其中“好瓜称为**标记(lable)**，拥有标记信息的示例，则称为**样例（example）**。<br />前面，我们预测的是离散值，例如“好瓜”，“坏瓜”，此类学习任务称为**分类（classification）**。如果，我们想要预测连续值，比如西瓜成熟度 0.99 0.89 0.56 ，此类任务称为**回归（regression）**。对于只涉及两个分类的二分类（binary classfication），通常称其中一个类为**正类（positive class）**，另一个类为**负类（negative class）**,设计多个分类的任务，称为**多分类（multi-class calssfication）**。<br />![](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1553655951411-847a65b5-8ae7-4f9b-94b6-0f8df0a10e9d.jpeg#align=left&display=inline&height=1445&originHeight=1550&originWidth=800&size=0&status=done&width=746)<br />学得模型之后，使用这个模型进行预测的过程称为**测试（testing）**，被测试的样本称为**测试样本（testing sample）**。<br />其实，我们还可以对西瓜进行**聚类（clustering）**，也就是将训练集中的西瓜分成若干组。每一组称为一个“簇”（cluster）。聚类产生的分类，我们事前是不知道的，在学习过程中我们的训练集没有标记信息。<br />根据训练数据是否拥有标记信息，学习任务可大致划分为两大类：**监督学习（supervised learning）**和**无监督学习(unsupervised learning)**，分类和回归是前者的代表，而聚类是后者的代表。<br />![](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1553655951398-2ea38815-b5b4-4199-813f-71e20017c316.jpeg#align=left&display=inline&height=367&originHeight=367&originWidth=640&size=0&status=done&width=640)<br />最后，需要注意的是，机器学习的目标是使学得的模型能很好地适用于“新样本”，而不是仅仅在训练集上工作得很好。学得的模型适用于新样本的能力，成为**泛化（generalization）**。泛化能力针对的其实是学习方法，它用于衡量该学习方法学习到的模型在整个样本空间上的表现。<br />回归问题往往会通过计算**误差（Error）**来确定模型的精确性。误差由于训练集和验证集的不同，会被分为训练误差（Training Error）和验证误差（Validation Error）。但值得注意的是，模型并不是误差越小就一定越好，因为如果仅仅基于误差，我们可能会得到一个**过拟合（Overfitting）**的模型；但是如果不考虑误差，我们可能会得到一个**欠拟合（Underfitting）**的模型，用图像来说的话大致可以这样理解：<br />![](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1553655951416-2dfbe7b8-215a-4512-934a-46f694683f1b.jpeg#align=left&display=inline&height=140&originHeight=140&originWidth=555&size=0&status=done&width=555)<br />如果模型十分简单，往往会欠拟合，对于训练数据和测试数据的误差都会很大；但如果模型太过于复杂，往往会过拟合，那么训练数据的误差可能相当小，但是测试数据的误差会增大。好的模型应当平衡于这两者之间。<br />
+<br />机器学习下面有很多算法，以及对应的应用场景，在接下来的文章，会慢慢啃完的。<br />
+<br />推荐一个网站，它上面有很多数据集供我们选择，如图：<br /><br /><br />画外音：搜索 UCI<br /><br /><br />![](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1553655951424-950591bc-c8e0-41c6-84ec-af445d6305ba.jpeg#align=left&display=inline&height=379&originHeight=548&originWidth=1080&size=0&status=done&width=746)<br />
+<br />以上只是冰山一角。<br />
+<br />（完）<br />
+
+---
+
+<br />大数据与人工智能的时代<br />你还在等什么？<br />   <br />![](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1553655951414-71fb7c31-b74f-4fde-8a86-c99b308e96b3.jpeg#align=left&display=inline&height=452&originHeight=655&originWidth=1080&size=0&status=done&width=746)<br />
+<br />你在看吗？<br /><br />
+> 本文参考：
+>   1.《机器学习》-- 周志华.清华大学出版社
+>   1.  吴恩达机器学习课程
+
+<br /><br /><br />

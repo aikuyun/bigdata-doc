@@ -18,6 +18,13 @@ const sidebar = {
       'distribute',
     ]
   }],
+  '/ml/': [{
+      title: '机器学习基础',
+      children: [
+        'ml-guid',
+        'ml-term'
+      ]
+    }],
   '/ziyuan01/': [{
     title: '大数据简介',
     children: [
@@ -69,6 +76,9 @@ var nav = [{
   text: '大数据',
   link: '/ziyuan01/'
 }, {
+  text: '机器学习',
+  link: '/ml/'
+}, {
   text: '👨‍💻‍深挖底层',
   link: '/ziyuan02/'
 }, {
@@ -80,9 +90,6 @@ var nav = [{
 }
 ,
 {
-  text: '关于我',
-  link: '/about/'
-}, {
   text: '留言',
   link: '/liuyan/'
 },
