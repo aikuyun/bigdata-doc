@@ -1,4 +1,5 @@
 ![自学](https://img.shields.io/badge/%E8%87%AA%E5%AD%A6-%E5%A4%A7%E6%95%B0%E6%8D%AE-brightgreen.svg)
+![zixue](https://img.shields.io/badge/Self--taught%20-Big%20Data-brightgreen.svg)
 
 # 资源整合
 
