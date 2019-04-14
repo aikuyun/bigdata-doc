@@ -77,11 +77,11 @@
 
 - Hadoop
 	- [Hadoop HA 原理分析](https://mp.weixin.qq.com/s/BmVvoi8k0mU9pmGQCl2Sug)
-	- Hadoop 系列文章
-		- [Hadoop系列之 1.0 和 2.0 架构](https://mp.weixin.qq.com/s/B_wOtK1gSVlmB4cF5hZG2A)
-    - [Hadoop系列之 Hive](https://mp.weixin.qq.com/s/fWKX6NR908fLbVUMFwpj8A)
-    - [Hadoop系列之 Mapreduce](https://mp.weixin.qq.com/s/JDDTTy6QfZtwz547M88GMQ)
-    - [Hadoop系列之 HDFS](https://mp.weixin.qq.com/s/Dcsat0-iRB_xYRBoMfhoXg)
+	- [Hadoop系列之 1.0 和 2.0 架构](https://mp.weixin.qq.com/s/B_wOtK1gSVlmB4cF5hZG2A)
+  - [Hadoop系列之 Hive](https://mp.weixin.qq.com/s/fWKX6NR908fLbVUMFwpj8A)
+  - [Hadoop系列之 Mapreduce](https://mp.weixin.qq.com/s/JDDTTy6QfZtwz547M88GMQ)
+  - [Hadoop系列之 HDFS](https://mp.weixin.qq.com/s/Dcsat0-iRB_xYRBoMfhoXg)
+
 - Flink
   - [Flink社区电子书](https://mp.weixin.qq.com/s?__biz=MzIwMjA2MTk4Ng==&mid=2247485438&idx=1&sn=2bb7f82402dc4607f94cdb78e48cd48b&chksm=96e52633a192af25a5c6b2371dfed395aa46168639c01bb49dbc36381f2b3dd889bfe9256d6a&xtrack=1&scene=0&subscene=91&sessionid=1555230598&clicktime=1555230760&ascene=7&devicetype=android-27&version=27000334&nettype=cmnet&abtest_cookie=BAABAAoACwASABMABQAjlx4AVpkeAMeZHgDRmR4A3JkeAAAA&lang=zh_CN&pass_ticket=cRjrq%2F8EqXfIhZvDoJO4rqTvtx1hEu4fyHiignznzsezMHPtQ83VFn8G02ozwToC&wx_header=1)
 
