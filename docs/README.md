@@ -10,5 +10,5 @@ features:
   details: 分享有价值的开源资料
 - title: 高效
   details: 有目的的学习，高效升级打怪
-footer: Copyright © 2016 - 2018 cuteximi.com
+footer: Copyright © 2016 - 2019 cuteximi.com
 ---
