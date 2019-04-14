@@ -44,9 +44,9 @@
 
 **注意：上面提到的，**<br />**<br />**所有提到的资料课程，GitHub原文都有链接哦。**
 
-https://github.com/clone95/Virgilio/tree/master/zh-CN/LearningPaths/Machine%20Learning%20Engineer%20Career%20Path
+[戳这里](https://github.com/clone95/Virgilio/tree/master/zh-CN/LearningPaths/Machine%20Learning%20Engineer%20Career%20Path)
 
 ---
-大数据<br />架构<br />机器学习<br />   <br />**如果对您有帮助，欢迎点赞、关注、转发。**<br />
+**如果对您有帮助，欢迎点赞、关注、转发。**<br />
 <br />
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/199648/1555226590435-cbd4cfbc-d941-4781-ae61-2e2c4439b6d2.png#align=left&display=inline&height=262&name=image.png&originHeight=655&originWidth=1080&size=206333&status=done&width=432)

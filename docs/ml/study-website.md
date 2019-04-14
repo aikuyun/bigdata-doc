@@ -5,7 +5,7 @@
 
 这篇文章，给大家推荐两个不错的网站。即使现在用不到，可以先收藏了。
 
-01<br />偏理论
+## 偏理论
 
 **www.coursera.org 免费**
 
@@ -18,7 +18,7 @@ AI 非技术通俗讲解 等级：初级 <br />https://www.coursera.org/learn
 
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/199648/1555227138315-c40da4f4-9616-4382-aaf3-dbc07da4c7d6.png#align=left&display=inline&height=302&name=image.png&originHeight=755&originWidth=1080&size=267801&status=done&width=432)
 
-02<br />偏工程化
+## 偏工程化
 
 **cn.udacity.com 收费**<br />**<br />机器学习、深度学习、计算机视觉、量化投资、自然语言处理、无人驾驶、数据科学家。
 
@@ -33,7 +33,7 @@ AI 非技术通俗讲解 等级：初级 <br />https://www.coursera.org/learn
 
 如果你是在校的大学生，时间充足，建议从 01 开始，打好理论基础。
 
-03<br />推荐书籍
+## 推荐书籍
 
 
 不错的书籍如下：
@@ -41,5 +41,5 @@ AI 非技术通俗讲解 等级：初级 <br />https://www.coursera.org/learn
 **统计学习方法 -- 李航**<br />**机器学习 -- 周志华（西瓜书）**<br />**深度学习 （花书）**
 
 ---
-大数据<br />架构<br />机器学习<br />   <br />
+<br />
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/199648/1555227168300-0783bc05-f331-4e3d-a8ee-44a7f7b940c4.png#align=left&display=inline&height=262&name=image.png&originHeight=655&originWidth=1080&size=206333&status=done&width=432)
