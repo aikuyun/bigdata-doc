@@ -17,9 +17,10 @@
 ### 在 github 上查看
 
 - 机器学习
-  - []()
-  - []()
-
+  - [从机器学习谈起](https://github.com/aikuyun/bigdata-doc/blob/master/docs/ml/ml-guid.md)
+  - [机器学习术语](https://github.com/aikuyun/bigdata-doc/blob/master/docs/ml/ml-term.md)
+  - [机器学习路线](https://github.com/aikuyun/bigdata-doc/blob/master/docs/ml/study-road.md)
+  - [推荐两个网站，认清自己的阶段](https://github.com/aikuyun/bigdata-doc/blob/master/docs/ml/study-website.md)
 
 - 分布式基础
 
