@@ -92,7 +92,7 @@ var nav = [{
 }
 ,
 {
-  text: '留言',
+  text: '工具',
   link: '/liuyan/'
 },
 {
