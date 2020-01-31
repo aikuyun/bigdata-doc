@@ -75,6 +75,8 @@
 - Hive 基础
   - [Hive 数据压缩格式总结](https://mp.weixin.qq.com/s/T6Y4vMYghb_asWdtsZnjpA)
   - [CombineFileInputFormat 文件分片总结](https://mp.weixin.qq.com/s/DZ-CfrVrr7i0iA2GRdBN1g)
+  - [Hive SQL 窗口函数](https://mp.weixin.qq.com/s/qhP2tOS5plxaczPN1JkWJw)
+  - [Hive SQL 分析函数](https://mp.weixin.qq.com/s/6nNr97z-Rj5Alofl8wCwhw)
 
 ## 欢迎关注原创公众号
 
