@@ -38,6 +38,8 @@
 
 - 解决方案
   - [很多大厂解决方案](https://github.com/aikuyun/ziyuan/blob/master/docs/It-chat/case.md)
+  - [日均万亿条数据如何处理？爱奇艺实时计算平台这样做](https://mp.weixin.qq.com/s/DKP08aUSNMOySNcs_y6ODA)
+  - [揭秘微信「看一看」 是如何为你推荐的](https://mp.weixin.qq.com/s/Regv8UUc5PH9HcnUq_zq3A)
 
 - 技术文章整理
 
@@ -68,15 +70,26 @@
 - Flink
   - [Flink社区电子书](https://mp.weixin.qq.com/s?__biz=MzIwMjA2MTk4Ng==&mid=2247485438&idx=1&sn=2bb7f82402dc4607f94cdb78e48cd48b&chksm=96e52633a192af25a5c6b2371dfed395aa46168639c01bb49dbc36381f2b3dd889bfe9256d6a&xtrack=1&scene=0&subscene=91&sessionid=1555230598&clicktime=1555230760&ascene=7&devicetype=android-27&version=27000334&nettype=cmnet&abtest_cookie=BAABAAoACwASABMABQAjlx4AVpkeAMeZHgDRmR4A3JkeAAAA&lang=zh_CN&pass_ticket=cRjrq%2F8EqXfIhZvDoJO4rqTvtx1hEu4fyHiignznzsezMHPtQ83VFn8G02ozwToC&wx_header=1)
   - [Flink 里程碑版本即将发布，快点入手](https://mp.weixin.qq.com/s/OmTmPHaP0vSPT128eAf2Ig)
+  - [重磅福利！《Apache Flink 十大技术难点实战》发布，帮你从容应对生产环境中的技术难题](https://mp.weixin.qq.com/s/U3c4oXFLPuc4XiUNUY55gg)
+  - [2020 年 Flink 学习资料整合，建议收藏](https://mp.weixin.qq.com/s/wuKBvNbkO-pTWZEMSvGLNg)
+
+
 
 - 数据仓库
   - [离线数仓与实时数仓（一）](https://mp.weixin.qq.com/s/dpwQ4sx-IWL66m03lPa6rg)
+  - [58全站用户行为数据仓库建设及实践](https://mp.weixin.qq.com/s/MnfdsLHGjK9okv020cS_Kg)
+  - [干货 | 携程机票数据仓库建设之路](https://mp.weixin.qq.com/s/oPQFDl-A-6BnPXhNdwnePA)
+  - [干货 | 携程Hadoop跨机房架构实践](https://mp.weixin.qq.com/s/S5SXNabYqwyUMl1ReLayKw)
 
 - Hive 基础
   - [Hive 数据压缩格式总结](https://mp.weixin.qq.com/s/T6Y4vMYghb_asWdtsZnjpA)
   - [CombineFileInputFormat 文件分片总结](https://mp.weixin.qq.com/s/DZ-CfrVrr7i0iA2GRdBN1g)
   - [Hive SQL 窗口函数](https://mp.weixin.qq.com/s/qhP2tOS5plxaczPN1JkWJw)
   - [Hive SQL 分析函数](https://mp.weixin.qq.com/s/6nNr97z-Rj5Alofl8wCwhw)
+
+- 底层基础
+  - [深入理解 MySQL 索引底层原理](https://mp.weixin.qq.com/s/J7eQcwBgQEGJk4bGIa9wDA)
+  - [缓存击穿、缓存失效及热点key的解决方案](https://mp.weixin.qq.com/s/TqqTDy2YizLMwE0tyHxKVA)
 
 ## 欢迎关注原创公众号
 
