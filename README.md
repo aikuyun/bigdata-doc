@@ -7,6 +7,8 @@
 大数据与机器学习笔记，持续更新中。
 
 # 文章分类
+- 大数据技术周报
+  - [大数据技术周报,每周更新](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0OTgxNjMyNA==&action=getalbum&album_id=2052897255342309378&scene=173&from_msgid=2247484324&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 
 - 机器学习
   - [从机器学习谈起](https://github.com/aikuyun/bigdata-doc/blob/master/docs/ml/ml-guid.md)
@@ -97,9 +99,9 @@
 
 ![扫我](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1576915516590-assets/web-upload/ea981007-28f3-4c56-9e85-edd18d3cc244.jpeg)
 
-公众号：大数据每日哔哔 专注大数据数据技术
+公众号：大数据学习指南 专注大数据数据技术
 
-![扫我](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1576915521566-assets/web-upload/98d28517-4071-4d46-a15b-4b23a7308705.jpeg)
+![扫我](https://cdn.nlark.com/yuque/0/2021/png/199648/1631944506464-83677e15-283f-43de-b106-5ff823300c85.png?x-oss-process=image%2Fresize%2Cw_900%2Climit_0)
 
 其他平台，会不定时同步更新。
 
