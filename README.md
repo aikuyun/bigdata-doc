@@ -95,10 +95,6 @@
 
 ## 欢迎关注原创公众号
 
-公众号：cuteximi   技术|思维|认知
-
-![扫我](https://cdn.nlark.com/yuque/0/2019/jpeg/199648/1576915516590-assets/web-upload/ea981007-28f3-4c56-9e85-edd18d3cc244.jpeg)
-
 公众号：大数据学习指南 专注大数据数据技术
 
 ![扫我](https://cdn.nlark.com/yuque/0/2021/png/199648/1631944506464-83677e15-283f-43de-b106-5ff823300c85.png?x-oss-process=image%2Fresize%2Cw_900%2Climit_0)
